@@ -25,5 +25,5 @@ matplotlib plot for the hexagonal grid. If you ask for a gif, it will be saved
 as mygif.gif.
 
 # To use
-Please run main.py, with all the other files in the same directory. Alternatively, ant_full_script.py is a single document containing all of the others.
+Please download AntSim.zip and run main.py, with all the other files in the same directory. Alternatively, ant_full_script.py is a single document containing all of the others.
 Warning: The scripts may make use of Python modules you haven't installed, such as hexalattice.
