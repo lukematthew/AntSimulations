@@ -2,16 +2,16 @@
 Creation of images and gifs of runs of Langton's ant extended to multiple colours, ants, including a hexagonal grid system.
 
 # Explanation
-This program is based on Langton's ant (https://en.wikipedia.org/
-wiki/Langton%27s_ant), but with some extensions. For example, you can run
+This program is based on Langton's ant (https://en.wikipedia.org/wiki/Langton%27s_ant)
+, but with some extensions. For example, you can run
 multiple ants at once or add more complex movement patterns (Langton's ant
 is the ant defined by "LR", which means go left for the first colour, and go
 right for the second colour. Longer patterns, such as "LRRRRRLLR", allow for
 more interesting results!).
 
 I've also made the program work on a hexagonal
-grid. This makes use of an external module called hexalattice (https://github.
-com/alexkaz2/hexalattice), paired with matplotlib.
+grid. This makes use of an external module called hexalattice (https://github.com/alexkaz2/hexalattice)
+, paired with matplotlib.
 
 Finally, for both types of
 grid, generation of a gif is possible, so you can watch how the ant(s) grow the
