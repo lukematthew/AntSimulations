@@ -158,8 +158,8 @@ def custom_antnum_warning(user_input):
         try:
 
             # Ask user if they want to go ahead
-            keep_going = input("%g is a lot of ants! Are you sure you want" +
-                               " to continue? (y/n): " % user_input)
+            keep_going = input("%g is a lot of ants! " % user_input +
+                               "Are you sure you want to continue? (y/n): ")
 
             # Bool to be returned
             keep_going_bool = bool()
@@ -241,8 +241,8 @@ def custom_gridsize_warning(user_input):
         try:
 
             # Ask user if they want to continue
-            keep_going = input("%g is a large grid size! Are you sure you" +
-                               " want to continue? (y/n): " % user_input)
+            keep_going = input("%g is a large grid size! " % int(user_input) +
+                               "Are you sure you want to continue? (y/n): ")
 
             # Define bool to be returned
             keep_going_bool = bool()
@@ -321,8 +321,8 @@ def custom_runtime_warning(user_input):
         try:
 
             # Ask user if they want to continue
-            keep_going = input("%g is a long runtime! Are you sure you want" +
-                               "to continue? (y/n): " % user_input)
+            keep_going = input("%g is a long runtime! " % user_input +
+                               "Are you sure you want to continue? (y/n): ")
 
             # Define bool to be returned
             keep_going_bool = bool()
