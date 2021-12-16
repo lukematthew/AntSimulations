@@ -7,7 +7,7 @@ from hexagonal_movement_funcs import hex_ant_mover, hex_ant_pointer
 from grid_problem_funcs import hex_grid_fixer, hex_grid_unfixer
 import numpy as np
 import imageio
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from hexalattice.hexalattice \
     import create_hex_grid, plot_single_lattice_custom_colors
 
