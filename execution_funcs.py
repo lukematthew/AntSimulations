@@ -18,7 +18,7 @@ from hexalattice.hexalattice \
 # Mega function which uses the functions defined above
 # to run the square grid simulation
 def square_run(runtime, ant_num, grid_size, make_gif,
-               initial_pos, movement_pattern):
+               initial_pos_list, movement_pattern):
 
     # Make a list containing the movement pattern
     rules = square_rule_maker(movement_pattern)
@@ -38,7 +38,8 @@ def square_run(runtime, ant_num, grid_size, make_gif,
     # For each ant, make an addition to the dictionary. Each addition is in
     # turn a dictionary, containing the position and direction of the ant.
     for ant in range(ant_num):
-        master_dict.update({ant: {"ant_pos": initial_pos, "ant_direction": 0}})
+        master_dict.update({ant: {"ant_pos": initial_pos_list[ant],
+                                  "ant_direction": 0}})
 
     # Number of frames the gif will have. This can be changed, but making it
     # too small makes it hard to see what's happening, and making it too large
@@ -115,7 +116,7 @@ def square_run(runtime, ant_num, grid_size, make_gif,
 # Mega function which uses the functions defined above
 # to run the hexagonal grid simulation
 def hex_run(runtime, ant_num, grid_size, make_gif,
-            initial_pos, movement_pattern):
+            initial_pos_list, movement_pattern):
 
     # Create the movement ruleset from the input string
     rules = parse_rules_string(movement_pattern)
@@ -135,7 +136,8 @@ def hex_run(runtime, ant_num, grid_size, make_gif,
     # For each ant, make an addition to the dictionary. Each addition is in
     # turn a dictionary, containing the position and direction of the ant.
     for ant in range(ant_num):
-        master_dict.update({ant: {"ant_pos": initial_pos, "ant_direction": 0}})
+        master_dict.update({ant: {"ant_pos": initial_pos_list[ant],
+                                  "ant_direction": 0}})
 
     # Number of frames the gif will have. This can be changed, but making it
     # too small makes it hard to see what's happening, and making it too large
