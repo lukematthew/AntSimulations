@@ -15,7 +15,7 @@ def parse_rules_string(s):
     # [L2, N, N, L1, L2, L1]
     while i < len(s):
         t = s[i]
-        if t in 'LR':
+        if t in 'LR' and i != len(s) - 1:
             i += 1
             t += s[i]
         try:
