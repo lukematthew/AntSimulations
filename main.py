@@ -25,6 +25,8 @@ matplotlib plot for the hexagonal grid. If you ask for a gif, it will be saved
 as mygif.gif.
 """
 
+# WARNING FOR MARKER: please install an external module called hexalattice!
+
 # import functions
 from user_input_funcs import ask_for_antnum, ask_for_gif, ask_for_gridsize,\
      ask_for_hex_pattern, ask_for_square_pattern, ask_for_run_type, \
@@ -62,7 +64,9 @@ grid_size = ask_for_gridsize()
 # user can choose whether they want the ant to start in the centre of the
 # grid or a random position. They can also choose a custom position on
 # the grid.
-initial_pos = init_position_setter(ant_num, grid_size)
+initial_pos_list = []
+for i in range(ant_num):
+    initial_pos_list.append(init_position_setter(ant_num, grid_size))
 
 # Set the run time
 runtime = ask_for_runtime()
@@ -72,14 +76,14 @@ if (sim_is_hex is False):
 
     # Carry out a square run
     square_run(runtime, ant_num, grid_size, make_gif,
-               initial_pos, movement_pattern)
+               initial_pos_list, movement_pattern)
 
 # If a hexagonal run is selected
 elif (sim_is_hex is True):
 
     # Carry out a hexagonal run
     hex_run(runtime, ant_num, grid_size, make_gif,
-            initial_pos, movement_pattern)
+            initial_pos_list, movement_pattern)
 
 
 # END OF MAIN #
